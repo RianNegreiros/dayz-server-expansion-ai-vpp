@@ -1,9 +1,9 @@
 @echo off
 :start
 ::Server name
-set serverName=SSG Chernarus Local Server
+set serverName=Local Server
 ::Server files location
-set serverLocation="CC:\Program Files (x86)\Steam\steamapps\common\DayZServer"
+set serverLocation="C:\Program Files (x86)\Steam\steamapps\common\DayZServer"
 ::Server Port
 set serverPort=2302
 ::Server config
@@ -16,7 +16,7 @@ title %serverName% batch
 cd "%serverLocation%"
 echo (%time%) %serverName% started.
 ::Launch parameters (edit end: -config=|-port=|-profiles=|-doLogs|-adminLog|-netLog|-freezeCheck|-filePatching|-BEpath=|-cpuCount=)
-start "DayZ Server" /min "DayZServer_x64.exe" -config=%serverConfig% -port=%serverPort% "-profiles=config" "-mod=@CF;@Dabs Framework;@DayZ-Expansion-AI;@DayZ-Expansion-Core;@VPPAdminTools" -cpuCount=%serverCPU% -dologs -adminlog -netlog -freezecheck
+start "DayZ Server" /min "DayZServer_x64.exe" -config=%serverConfig% -port=%serverPort% "-profiles=config" "-mod=@CF;@Dabs Framework;@DayZ-Expansion-AI;@DayZ-Expansion-Core;@DeerIsle;@VPPAdminTools" -cpuCount=%serverCPU% -dologs -adminlog -netlog -freezecheck
 ::Time in seconds before kill server process (14400 = 4 hours)
 timeout 14390
 taskkill /im DayZServer_x64.exe /F
